@@ -1,0 +1,124 @@
+.header_l{
+	width:100%;
+	height:48px;
+	background-color:#3a3f51;
+	position:fixed;
+	top:0px;
+	text-align:center;
+	z-index:100;
+}
+.titlebar_l{
+	color:white;
+	height:48px;
+	line-height: 48px;
+    font-size: 15px;
+	letter-spacing:2px;
+    font-family: "Times New Roman",Georgia,Serif;
+}
+.menu_l{
+	width:48px;
+	height:48px;
+	position:fixed;
+	right:0px;
+	top:0px;
+	z-index:101;
+	font-family: "Times New Roman",Georgia,Serif;
+	font-size: 16px;
+	color:white;
+	line-height:48px;
+}
+.menu_list_l{
+	width:40%;
+	height:176px;
+	background-color:#3a3f51;
+	position:fixed;
+	top:48px;
+	right:10px;
+	border:1px solid #D8C1D2;
+	z-index:102
+}
+.menu_icon_l{
+}
+.menu_list_icon{
+	height:35px;
+	line-height:35px;
+	margin:0px 10px 0px 8px;
+}
+.menu_list_l ul li{
+	height:35px;
+	line-height:35px;
+	font-family: "Times New Roman",Georgia,Serif;
+	font-size: 16px;
+	color:white;
+	border-bottom:1px solid white;
+}
+.newpage{
+	margin-top:48px;
+}
+.serviceLayer ul li span{
+	height:40px;
+	line-height:40px;
+	background-color:white;
+	border:none;
+	width:50%;
+	position:relative;
+	float:left;
+}
+.serviceLayer .left{
+	text-align:left;
+	padding-left:2%;
+}
+.serviceLayer .right{
+	text-align:right;
+	padding-right:2%;
+}
+.serviceLayer .serviceIcon{
+	width:25%;
+	position:relative;
+	float:left;
+	margin-top:0px;
+	background-color:white;
+	border-left:1px solid white;
+	border-top:1px solid #d7d9e5;
+	border-bottom:1px solid #d7d9e5;
+}
+.serviceLayer .serviceIcon img{
+	width:100%;
+	height:auto;
+	padding:5px 20% 2px 20%;
+	border-radius: 26px;
+}
+.serviceLayer .serviceIcon p{
+	text-align:center;
+	font-size:12px;
+	width:100%;
+	margin-bottom:5px;
+}
+.carousel-inner .item img{
+	height:200px;
+	width:100%;
+}
+.problems{
+	width:100%;
+}
+.menu_left{
+	color:white;
+	width:48px;
+	height:48px;
+	line-height:48px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:101;
+	font-family: "Times New Roman",Georgia,Serif;
+    font-size: 17px;
+}
+.contact_right{
+	width:30%;
+	float:left;
+	height:40px;
+	line-height:40px;
+	font-family: "Times New Roman",Georgia,Serif;
+    font-size: 19px;
+    color: #606090;
+}

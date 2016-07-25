@@ -1,0 +1,244 @@
+
+@CHARSET "UTF-8";
+
+/* 边框颜色   #eaeaea */
+/*================================== 注册页面头部  ========================================*/
+.hDivStyle{background-color:#fff;width:100%;height:50px;position: fixed;top:0;z-index:11;border-bottom:2px solid #e1e1e1;}
+.hDivStyle h2{text-align:center;font:bold 22px "Arial Black", Gadget, sans-serif;line-height:50px;color:#000;display:block;}
+.hDivStyle h2 a{position:absolute;top:0;width:20%;height:100%;}
+.hDivStyle h2 a img{float:left;height:24px;margin:13px 12px;}
+.hDivStyle h2 .setUpStyle{left:0;}
+.hDivStyle h2 .discussStyle{right:0;color:#db1919;font-size:15px;}
+.hDivStyle h2 .discussStyle img{float:right;}
+
+/* 头部左侧地址定位 */
+.hDivStyle .address{float:left;width:auto;height:100%;overflow:hidden;}
+.hDivStyle .address label{float:left;padding-left:4px;font-size:14px;color:#a1a1a1;line-height:52px;}
+.hDivStyle .address img{width:10px;height:auto;margin:23px 4px;}
+.hDivStyle .searchName{float:left;width:38%;min-width:110px;margin-left:4px;position:relative;}
+.hDivStyle .searchName input
+  ,.hDivStyle .searchName label{width:80%;height:18px;line-height:18px;font-size:14px;padding:7px 10%;border:1px solid #c1c1c1;border-radius:18px;overflow:hidden;}
+.hDivStyle .searchName input{margin:8px 0;color:#000;}
+.hDivStyle .searchName label{position:absolute;left:0px;top:7px;z-index:2;color:#a1a1a1;}
+.hDivStyle .mapStyle{position:absolute;top:0;right:4%;height:36px;padding:6px 0;}
+.hDivStyle .mapStyle img{width:28px;}
+
+.bgColorStyle{background-color:rgba(00,00,00,0.2);opacity: 1;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index:13;}
+.areaStyle{position:absolute;top:0;width:100%;height:auto; background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.areaStyle li{float:left;width:33%;text-align: center;}
+.areaStyle a{width:90px;height: 36px;line-height:36px;background-color:#fff;text-align:center;margin:10px auto 0;border-radius:6px;display:block;}
+
+.wyNameStyle{position:absolute;top:0;width:100%;height:auto;background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.wyNameStyle li{flaot:left;width:100%;border-bottom:1px solid #ccc;height:44px;line-height:44px;background-color:#fff;text-indent:20px;}
+
+/* 底部选中效果 */
+.navSelectStyle{background-color:#fee3e3;}
+
+
+
+/** 
+ * 地区二、三级联动  
+ **/
+.bgColorStyle{background-color:rgba(00,00,00,0.2);opacity: 1;position: fixed;top: 52px;left: 0;width: 100%;height: 100%;z-index:13;display:none;}
+/* 横向二级排列
+.areaStyle{position:absolute;top:0;width:100%;height:auto; background-color:#f0f0f0;z-index:14;padding-bottom:10px;}
+.areaStyle li{float:left;width:33%;text-align: center;}
+.areaStyle a{width:90px;height: 36px;line-height:36px;background-color:#fff;text-align:center;margin:10px auto 0;border-radius:6px;display:block;}
+.wyNameStyle{position:absolute;top:0;width:100%;height:auto;background-color:#f0f0f0;z-index:14;padding-bottom:10px;}
+.wyNameStyle li{flaot:left;width:100%;border-bottom:1px solid #ccc;height:44px;line-height:44px;background-color:#fff;text-indent:20px;}
+*/ 
+
+/** 竖向三级排列 
+ * 2015.7.23修改地区三级联动效果
+ * 整体背景色：#fff;
+ * 第一级联动背景色：#f7f7f7;
+ 	       第二种背景色：#e5e5e5;
+ * 第二级联动背景色：#f3f3f3;
+ * 第三级联动背景色：#fff;
+ * 被选中的绿色块：#5eab1f;
+ * 字体颜色：#323232;
+ * 边框颜色：#dedede;
+ **/
+.addressPopStyle{position:fixed;top:0;left:0;z-index:14;width:94%;margin:52px 3% 0;height:80%;background-color:#fff;overflow:hidden;display:none;}
+  .addressPopStyle ul{float:left;height:100%;overflow-y: scroll;}
+  .addressPopStyle li{float:left;width:100%;}
+  .addressPopStyle li a{float:left;width:100%;border-bottom:1px solid #dedede;height:44px;line-height:44px;text-indent:10%;}
+  .addressPopStyle li a sub{float:left;width:1.6%;height:100%;}
+  
+  .addressPopStyle ul .activeStyle{background-color: #fff;}
+  .addressPopStyle ul .activeStyle sub{width:1.6%;height:100%;background-color:#5eab1f;}
+    
+  /*
+  .addressPopStyle ul li{float:left;width:100%;border-bottom:1px solid #dedede;height:44px;line-height:44px;text-indent:10%;}
+  .addressPopStyle ul li a{float:left;width:98.4%;color:#323232;font-size: 16px;}
+  .addressPopStyle ul li sub{float:left;width:1.6%;height:100%;}
+  .addressPopStyle ul .activeStyle{background-color: #fff;}
+  .addressPopStyle ul .activeStyle sub{width:1.6%;height:100%;background-color:#5eab1f;}
+  .titleStyle{width:50%;background-color:#f7f7f7;}
+  .titleStyle li{background-color:#e5e5e5;}
+  .areaStyle{width:50%;background-color:#f3f3f3;overflow-y: scroll;}
+	
+/** 地址切换提示层 **/
+.addressTipStyle{position: absolute;top:0;left:0;width:92%;height:135px;margin:15% 4%;background-color:#fff;border-radius:4px;z-index:14;padding-bottom:16px;}
+.addressTipStyle h1{font-weight: bold;font-size: 16px;height:44px;line-height:44px;text-align: center;border-bottom: 1px solid yellowgreen;}
+.addressTipStyle span{float:left;width:96%;height:44px;line-height:44px;margin:0 2%;font-size:14px;color:#323232;}
+.addressTipStyle a{float:left;width:26%;margin:0 12%;height:40px;line-height:40px;background-color: yellowgreen;border-radius:4px;color:#fff;text-align:center;}
+.addressTipStyle a.activeStyle{background-color: #ccc;}
+@CHARSET "UTF-8";
+
+/* 边框颜色   #eaeaea */
+/*================================== 注册页面头部  ========================================*/
+.hDivStyle{background-color:#fff;width:100%;height:50px;position: fixed;top:0;z-index:11;border-bottom:2px solid #e1e1e1;}
+.hDivStyle h2{text-align:center;font:bold 22px "Arial Black", Gadget, sans-serif;line-height:50px;color:#000;display:block;}
+.hDivStyle h2 a{position:absolute;top:0;width:20%;height:100%;}
+.hDivStyle h2 a img{float:left;height:24px;margin:13px 12px;}
+.hDivStyle h2 .setUpStyle{left:0;}
+.hDivStyle h2 .discussStyle{right:0;color:#db1919;font-size:15px;}
+.hDivStyle h2 .discussStyle img{float:right;}
+
+/* 头部左侧地址定位 */
+.hDivStyle .address{float:left;width:auto;height:100%;overflow:hidden;}
+.hDivStyle .address label{float:left;padding-left:4px;font-size:14px;color:#a1a1a1;line-height:52px;}
+.hDivStyle .address img{width:10px;height:auto;margin:23px 4px;}
+.hDivStyle .searchName{float:left;width:38%;min-width:110px;margin-left:4px;position:relative;}
+.hDivStyle .searchName input
+  ,.hDivStyle .searchName label{width:80%;height:18px;line-height:18px;font-size:14px;padding:7px 10%;border:1px solid #c1c1c1;border-radius:18px;overflow:hidden;}
+.hDivStyle .searchName input{margin:8px 0;color:#000;}
+.hDivStyle .searchName label{position:absolute;left:0px;top:7px;z-index:2;color:#a1a1a1;}
+.hDivStyle .mapStyle{position:absolute;top:0;right:4%;height:36px;padding:6px 0;}
+.hDivStyle .mapStyle img{width:28px;}
+
+.bgColorStyle{background-color:rgba(00,00,00,0.2);opacity: 1;position: fixed;top: 50px;left: 0;width: 100%;height: 100%;z-index:13;}
+.areaStyle{position:fixed;top:50px;width:100%;height:auto; background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.areaStyle li{float:left;width:33%;text-align: center;}
+.areaStyle a{width:90px;height: 36px;line-height:36px;background-color:#fff;text-align:center;margin:10px auto 0;border-radius:6px;display:block;}
+
+.wyNameStyle{position:absolute;top:0;width:100%;height:auto;background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.wyNameStyle li{flaot:left;width:100%;border-bottom:1px solid #ccc;height:44px;line-height:44px;background-color:#fff;text-indent:20px;}
+
+/* 底部选中效果 */
+.navSelectStyle{background-color:#fee3e3;}
+
+ 
+/** 地址切换提示层 **/
+
+@CHARSET "UTF-8";
+
+/* 边框颜色   #eaeaea */
+/*================================== 注册页面头部  ========================================*/
+.hDivStyle{background-color:#fff;width:100%;height:50px;position: fixed;top:0;z-index:11;border-bottom:2px solid #e1e1e1;}
+.hDivStyle h2{text-align:center;font:bold 22px "Arial Black", Gadget, sans-serif;line-height:50px;color:#000;display:block;}
+.hDivStyle h2 a{position:absolute;top:0;width:20%;height:100%;}
+.hDivStyle h2 a img{float:left;height:24px;margin:13px 12px;}
+.hDivStyle h2 .setUpStyle{left:0;}
+.hDivStyle h2 .discussStyle{right:0;color:#db1919;font-size:15px;}
+.hDivStyle h2 .discussStyle img{float:right;}
+
+/* 头部左侧地址定位 */
+.hDivStyle .address{float:left;width:auto;height:100%;overflow:hidden;}
+.hDivStyle .address label{float:left;padding-left:4px;font-size:14px;color:#a1a1a1;line-height:52px;}
+.hDivStyle .address img{width:10px;height:auto;margin:23px 4px;}
+.hDivStyle .searchName{float:left;width:38%;min-width:110px;margin-left:4px;position:relative;}
+.hDivStyle .searchName input
+  ,.hDivStyle .searchName label{width:80%;height:18px;line-height:18px;font-size:14px;padding:7px 10%;border:1px solid #c1c1c1;border-radius:18px;overflow:hidden;}
+.hDivStyle .searchName input{margin:8px 0;color:#000;}
+.hDivStyle .searchName label{position:absolute;left:0px;top:7px;z-index:2;color:#a1a1a1;}
+.hDivStyle .mapStyle{position:absolute;top:0;right:4%;height:36px;padding:6px 0;}
+.hDivStyle .mapStyle img{width:28px;}
+
+.bgColorStyle{background-color:rgba(00,00,00,0.2);opacity: 1;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index:13;}
+.areaStyle{position:absolute;top:0;width:100%;height:auto; background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.areaStyle li{float:left;width:33%;text-align: center;}
+.areaStyle a{width:90px;height: 36px;line-height:36px;background-color:#fff;text-align:center;margin:10px auto 0;border-radius:6px;display:block;}
+
+.wyNameStyle{position:absolute;top:0;width:100%;height:auto;background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.wyNameStyle li{flaot:left;width:100%;border-bottom:1px solid #ccc;height:44px;line-height:44px;background-color:#fff;text-indent:20px;}
+
+/* 底部选中效果 */
+.navSelectStyle{background-color:#fee3e3;}
+
+
+
+/** 
+ * 地区二、三级联动  
+ **/
+.bgColorStyle{background-color:rgba(00,00,00,0.2);opacity: 1;position: fixed;top: 52px;left: 0;width: 100%;height: 100%;z-index:13;display:none;}
+/* 横向二级排列
+.areaStyle{position:absolute;top:0;width:100%;height:auto; background-color:#f0f0f0;z-index:14;padding-bottom:10px;}
+.areaStyle li{float:left;width:33%;text-align: center;}
+.areaStyle a{width:90px;height: 36px;line-height:36px;background-color:#fff;text-align:center;margin:10px auto 0;border-radius:6px;display:block;}
+.wyNameStyle{position:absolute;top:0;width:100%;height:auto;background-color:#f0f0f0;z-index:14;padding-bottom:10px;}
+.wyNameStyle li{flaot:left;width:100%;border-bottom:1px solid #ccc;height:44px;line-height:44px;background-color:#fff;text-indent:20px;}
+*/ 
+
+/** 竖向三级排列 
+ * 2015.7.23修改地区三级联动效果
+ * 整体背景色：#fff;
+ * 第一级联动背景色：#f7f7f7;
+ 	       第二种背景色：#e5e5e5;
+ * 第二级联动背景色：#f3f3f3;
+ * 第三级联动背景色：#fff;
+ * 被选中的绿色块：#5eab1f;
+ * 字体颜色：#323232;
+ * 边框颜色：#dedede;
+ **/
+.addressPopStyle{position:fixed;top:0;left:0;z-index:14;width:100%;margin:52px 0;height:96%;background-color:#fff;overflow:hidden;display:none;}
+  .addressPopStyle ul{float:left;height:100%;}
+  .addressPopStyle li{float:left;width:100%;}
+  .addressPopStyle li a{float:left;width:100%;border-bottom:1px solid #dedede;height:44px;line-height:44px;text-indent:10%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+  .addressPopStyle li a sub{float:left;width:1.6%;height:100%;}
+  
+  .addressPopStyle ul .activeStyle{background-color: #fff;}
+  .addressPopStyle ul .activeStyle sub{width:1.6%;height:100%;background-color:#5eab1f;}
+    .titleStyle{background-color:#f7f7f7;width:20%;}
+    .titleStyle a{background-color:#f5f5f5;}
+    .secondLevelStyle{background-color:#e8e8e8;overflow-y: auto;width:20%;display:none;}
+    .thirdLevelStyle{background-color:#e8e8e8;width:53%;display:none;overflow-y:scroll;}
+    .jdInfoStyle{background-color:#f7f7f7;width:26%;}
+  /*
+  .addressPopStyle ul li{float:left;width:100%;border-bottom:1px solid #dedede;height:44px;line-height:44px;text-indent:10%;}
+  .addressPopStyle ul li a{float:left;width:98.4%;color:#323232;font-size: 16px;}
+  .addressPopStyle ul li sub{float:left;width:1.6%;height:100%;}
+  .addressPopStyle ul .activeStyle{background-color: #fff;}
+  .addressPopStyle ul .activeStyle sub{width:1.6%;height:100%;background-color:#5eab1f;}
+  .titleStyle{width:50%;background-color:#f7f7f7;}
+  .titleStyle li{background-color:#e5e5e5;}
+  .areaStyle{width:50%;background-color:#f3f3f3;overflow-y: scroll;}
+	
+/** 地址切换提示层 **/
+@CHARSET "UTF-8";
+
+/* 边框颜色   #eaeaea */
+/*================================== 注册页面头部  ========================================*/
+.hDivStyle{background-color:#fff;width:100%;height:50px;position: fixed;top:0;z-index:11;border-bottom:2px solid #e1e1e1;}
+.hDivStyle h2{text-align:center;font:bold 22px "Arial Black", Gadget, sans-serif;line-height:50px;color:#000;display:block;}
+.hDivStyle h2 a{position:absolute;top:0;width:20%;height:100%;}
+.hDivStyle h2 a img{float:left;height:24px;margin:13px 12px;}
+.hDivStyle h2 .setUpStyle{left:0;}
+.hDivStyle h2 .discussStyle{right:0;color:#db1919;font-size:15px;}
+.hDivStyle h2 .discussStyle img{float:right;}
+
+/* 头部左侧地址定位 */
+.hDivStyle .address{float:left;width:auto;height:100%;overflow:hidden;}
+.hDivStyle .address label{float:left;padding-left:4px;font-size:14px;color:#a1a1a1;line-height:52px;}
+.hDivStyle .address img{width:10px;height:auto;margin:23px 4px;}
+.hDivStyle .searchName{float:left;width:38%;min-width:110px;margin-left:4px;position:relative;}
+.hDivStyle .searchName input
+  ,.hDivStyle .searchName label{width:80%;height:18px;line-height:18px;font-size:14px;padding:7px 10%;border:1px solid #c1c1c1;border-radius:18px;overflow:hidden;}
+.hDivStyle .searchName input{margin:8px 0;color:#000;}
+.hDivStyle .searchName label{position:absolute;left:0px;top:7px;z-index:2;color:#a1a1a1;}
+.hDivStyle .mapStyle{position:absolute;top:0;right:4%;height:36px;padding:6px 0;}
+.hDivStyle .mapStyle img{width:28px;}
+
+.bgColorStyle{background-color:rgba(00,00,00,0.2);opacity: 1;position: fixed;top: 50px;left: 0;width: 100%;height: 100%;z-index:13;}
+.areaStyle{position:fixed;top:50px;width:100%;height:auto; background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.areaStyle li{float:left;width:33%;text-align: center;}
+.areaStyle a{width:90px;height: 36px;line-height:36px;background-color:#fff;text-align:center;margin:10px auto 0;border-radius:6px;display:block;}
+
+.wyNameStyle{position:absolute;top:0;width:100%;height:auto;background-color:#f0f0f0;z-index:60;padding-bottom:10px;}
+.wyNameStyle li{flaot:left;width:100%;border-bottom:1px solid #ccc;height:44px;line-height:44px;background-color:#fff;text-indent:20px;}
+
+/* 底部选中效果 */
+.navSelectStyle{background-color:#fee3e3;}
+
+

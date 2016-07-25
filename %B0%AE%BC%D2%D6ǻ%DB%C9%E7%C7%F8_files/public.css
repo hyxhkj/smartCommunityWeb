@@ -1,0 +1,135 @@
+@CHARSET "UTF-8";
+
+/**
+ * 橙色的字体和背景：
+ *	color:#ff4200;
+ 
+ * 灰色字体颜色：
+ *	深层次：color:#8d8d8d;
+ 
+ * 灰色的按钮、背景和主题
+ *  最深层次：color:#403f3f;
+ *  较深层次：color:#7c7c7c;
+ 
+ * 灰色边框颜色  :
+ *	中层次：color:#ccc;
+ * 	较浅层次：color:#d6d6d6;
+ *	浅层次：color:#eaeaea;
+ * 	最浅层次：color:#efefef;
+ 
+ * 黑色字体色：color:#1f1f1f;
+ * 绿色字体色：color:#04a617;
+**/
+html{background-color:#eee;height:100%;}
+body{width:100%;font:normal 12px arail,微软雅黑,黑体,宋体;}
+.wrap{position:relative;width:100%;margin:0 auto;max-width:720px;min-width:320px;margin-top:58px;}
+span sup
+  , h2 sup{vertical-align:super;font-size:16px;}
+
+/*================================== 按钮背景图处理 =====================================*/
+/* 红色背景图按钮 */
+input.confirmStyle {
+	float:left;width:80%;height:44px;line-height:44px;margin:20px 8%;padding:0 2%;
+	background:url("../image/btnImg_003.jpg") repeat-x #db1919;
+	color:#fff;border-radius:8px;font-size:18px;text-align:center;
+}
+a.confirmStyle {
+	float:left;width:80%;height:44px;line-height:44px;margin:20px 8%;padding:0 2%;
+	background:url("../image/btnImg_003.jpg") repeat-x #db1919;
+	color:#fff;border-radius:8px;font-size:18px;text-align:center;
+}
+/* 绿色背景图按钮 */
+input.addBtnStyle {
+	float:left;width:80%;margin:20px 10%;text-align:center;
+	background:url("../image/btnImg_004.jpg") repeat-x #db1919;
+	color:#fff;border-radius:8px;height:50px;line-height:50px;font-size:18px;
+}
+a.addBtnStyle {
+	float:left;width:80%;margin:20px 10%;text-align:center;
+	background:url("../image/btnImg_004.jpg") repeat-x #db1919;
+	color:#fff;border-radius:8px;height:50px;line-height:50px;font-size:18px;
+}
+
+/*================================== 不同列表处理 =====================================*/
+/* ul-li的公共样式 */
+.style01 ul{display:none;}
+
+/* 列表样式--背景图片为箭头 */
+.ul_liStyle01{float:left;width:100%;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background-color:#fff;}
+.ul_liStyle01 li{float:left;width:96%;margin-left:4%;height:45px;border-bottom:1px solid #f3f3f3;background:url("../image/property/nextImg_001.png") 96% center no-repeat;}
+.ul_liStyle01 li a{float:left;width:100%;line-height:45px;font-size:15px;}
+
+/* 列表样式--背景图片没有箭头 */
+.ul_liStyle02{float:left;width:100%;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background-color:#fff;}
+.ul_liStyle02 li{float:left;width:96%;margin-left:4%;height:45px;border-bottom:1px solid #f3f3f3;position:relative;}
+.ul_liStyle02 li span{float:left;line-height:45px;}
+.ul_liStyle02 li input
+	,.ul_liStyle02 li label{float:left;font-size:14px;padding:0 2%;}
+.ul_liStyle02 li label{position:absolute;}
+
+/* 多行文字的列表样式 --（便民电话列表页面、公告列表页面）*/
+.listStyle02{float:left;width:96%;border:1px solid #c1c1c1;border-radius:5px;margin:10px 2%;}
+.listStyle02 h3{
+	float:left;width:100%;height:44px;line-height:44px;
+	color:mediumvioletred;
+	border-bottom:1px solid #c1c1c1;
+	text-indent:20px;
+	background-color:#fff;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+}
+.listStyle02 h3.firstLine{border-top-left-radius:5px;border-top-right-radius:5px;}
+.listStyle02 a{float:left;width:96%;padding:0 2%;border-bottom:1px solid #c1c1c1;}/* 只两行文字时的高度： height:64px; 三行的高度：height:86px; */
+.listStyle02 a p{float:left;width:86%;padding:10px 8px;}
+.listStyle02 a p > *{float:left;width:100%;line-height:22px;overflow:hidden;text-overflow:ellpsis;white-space:nowrap;}
+.listStyle02 a p label{color:#8d8d8d;}
+.listStyle02 a img{float:right;margin:25px 4px;width:8px;height:14px;}
+.triplexRowStyle a img{margin:35px 4px;}
+
+/* 标题+内容区--纯文字介绍 */
+.introduct01{float:left;width:100%;background-color:#fff;padding:4px 0;}
+.introduct01 h3{float:left;width:92%;margin:5px 4% 4px;border-bottom:1px solid #ddd;height:32px;line-height:32px;font-size:18px;color:#666;}
+.introduct01 p{float:left;width:92%;margin:0 4%;line-height:24px;text-indent: 20px;color:#777;font-size:16px;}
+.introduct01 p label{float:left;width:100%;font-size:16px;}
+.introduct01 p a{color:orangered;font-size:18px;padding:0 4px;text-decoration:underline;}
+
+/*================================== 单复选框处理 =====================================*/
+/* "我同意"复选框区 */
+.agreeStyle{width:88%;height:15px;line-height:15px;margin:10px 6%;}
+.agreeStyle label{float:left;width:auto;height:15px;text-indent:18px;font-size:15px;background:url("../image/property/agreeImg_001_02.png") 0 -17px no-repeat;}
+.agreeStyle label.selectStyle{background-position: 0 0;}
+.agreeStyle a{color:#08ad42;font-size:15px;line-height:15px;text-decoration:underline;}
+
+/*================================== 其他效果处理 =====================================*/
+/* 返回顶部样式 */
+.scrollTopStyle{
+	position:fixed;bottom:10px;right:5px;z-index:5;
+	width:28px;height:32px;line-height:16px;padding:6px 10px;
+	cursor:pointer;background-color:orange;border-radius:10px;color:#fff;
+}
+
+/* 底部版权区 */
+.copyRightStyle{float:left;width:100%;text-align:center;margin:30px 0;color:#949494;}
+
+/*================================== 头部底部固定内容块处理 =====================================*/
+/* 头部固定区--（新闻详情页面） */
+.topTitleStyle{width:94%;height:44px;position:fixed;top:52px;background-color:#e7e7e7;z-index:3;padding:4px 3% 0;}
+
+/* 头部搜索框 */
+.searchStyle{float:left;width:96%;margin:0 2%;background-color:#fff;border:1px solid #c1c1c1;border-radius:5px;overflow:hidden;}
+.searchStyle img{margin:0 10px;width:18px;height:18px;padding:13px 0;}
+.searchStyle input
+	, .searchStyle label{height:20px;padding:12px 0px;width:82%;}
+.searchStyle label{color:#a1a1a1;position:absolute;left:56px;}
+
+/* 底部导航区 */
+.fDivStyle{position:fixed;bottom:0;z-index:11; height:66px;background-color:#fff;width:100%;border-top:1px solid #eee;}
+.fDivStyle div{width:100%;max-width:720px;min-width:320px;margin:0 auto;height:58px;text-align:center;}
+.fDivStyle div a{float:left;width:20%;height:66px;overflow:hidden;}
+.fDivStyle div a img{margin:5px auto 0;display:block;width:36px;}
+.fDivStyle div a span{float:left;width:100%;height:25px;line-height:25px;color:#696969;font-size:15px;}
+
+/* 底部导航区 */
+.fBtnStyle{position:fixed;bottom:0;z-index:4;height:66px;background-color:#fff;width:100%;border-top:1px solid #eee;}
+.fBtnStyle a
+  ,.fBtnStyle input{width:40%;}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<div class="newpage" style="margin-top:48px;">
+
+<div class="problems" ng-controller="problemsCtrl">
+              <!-- DIRECT CHAT PRIMARY -->
+              <div class="box box-primary direct-chat direct-chat-primary" style="height:100%;">
+                <div class="box-header with-border">
+                  <h3 class="box-title" style="font-size:16px;">小区物业问题</h3>				  
+				  <div class="box-tools pull-right" style="font-size:16px;">联系物业<a href="tel:18688888888"><i class="fa fa-phone-square" style="color:#3a3f51;margin-left:8px;"></i></a>   
+<a href="sms:18688888888"><i class="fa fa-envelope-o" style="color:#3a3f51;margin-left:2px;"></i></a></div>				  
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <!-- Conversations are loaded here -->
+                  <div class="direct-chat-messages" style="height:100%;">
+                    <!-- Message. Default to the left
+                    <div class="direct-chat-msg">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                        <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                      </div><!-- /.direct-chat-info
+                      <img class="direct-chat-img" src="views/images/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img 
+                      <div class="direct-chat-text">
+                        Is this template really for free? That's unbelievable!
+                      </div><!-- /.direct-chat-text 
+                    </div><!-- /.direct-chat-msg -->
+
+					<div class="direct-chat-msg right">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-right">用户</span>
+                        <span class="direct-chat-timestamp pull-left">2016-06-23 下午10:05</span>
+                      </div><!-- /.direct-chat-info -->
+                      <img class="direct-chat-img" src="views/images/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                      <div class="direct-chat-text">
+                        物业您好，晶都国际小区26号楼5单元三楼楼梯声控灯坏了，烦请协助解决故障问题 感谢！！！
+                      </div><!-- /.direct-chat-text -->
+                    </div><!-- /.direct-chat-msg -->
+					
+					<div class="direct-chat-msg">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-left">物业</span>
+                        <span class="direct-chat-timestamp pull-right">2016-06-24 上午8:10</span>
+                      </div><!-- /.direct-chat-info -->
+                      <img class="direct-chat-img" src="views/images/user8-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                      <div class="direct-chat-text">
+                        信息已收到，已联系物业工作人员前去查看，不便之处敬请谅解
+                      </div><!-- /.direct-chat-text -->
+                    </div>
+					
+                    <!-- Message to the right -->
+                    <div class="direct-chat-msg right" ng-repeat="msg in list">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-right">{{msg.name}}</span>
+                        <span class="direct-chat-timestamp pull-left">{{msg.time}}</span>
+                      </div><!-- /.direct-chat-info -->
+                      <img class="direct-chat-img" src="views/images/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                      <div class="direct-chat-text">
+                        {{msg.info}}
+                      </div><!-- /.direct-chat-text -->
+                    </div><!-- /.direct-chat-msg -->
+                  </div><!--/.direct-chat-messages-->
+
+                </div><!-- /.box-body -->
+                <div class="box-footer" style="position:fixed;bottom:0px;z-index:1;">
+                  <form novalidate="novalidate" name="propertyForm" role="form">
+                    <div class="input-group">
+                      <input type="text" placeholder="Type Message ..." class="form-control" name="Introduction" ng-model="Introduction" required>
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary btn-flat" ng-disabled="propertyForm.Introduction.$error.required" ng-click="send()">Send</button>
+                      </span>
+                    </div>
+                  </form>
+                </div><!-- /.box-footer-->
+              </div><!--/.direct-chat -->
+            </div>
+
+</div>

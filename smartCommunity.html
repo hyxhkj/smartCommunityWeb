@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<title>智慧社区</title>
+<link rel='stylesheet' href='css/ngDialog.min.css' ><link/>
+<link rel='stylesheet' href='css/ngDialog-theme-default.min.css' ><link/>
+<link rel='stylesheet' href='css/ngDialog-theme-plain.min.css' ><link/>
+<link rel='stylesheet' href='angle/css/animate.min.css' ><link/>
+<link rel='stylesheet' href='angle/css/app.css' ><link/>
+<link rel='stylesheet' href='angle/css/bootstrap.css' ><link/>
+<link rel='stylesheet' href='css/font-awesome.min.css' ><link/>
+<link rel='stylesheet' href='angle/css/simple-line-icons.css' ><link/>
+<link rel='stylesheet' href='angle/css/whirl.css' ><link/>
+<link rel='stylesheet' href='css/layer.css' ><link/>
+<link rel='stylesheet' href='css/responsive.css' ><link/>
+<link rel='stylesheet' href='css/style.css' ><link/>
+<link rel='stylesheet' href='css/smartCommunity.css' ><link/>
+<link rel='stylesheet' href='css/AdminLTE.min.css' ><link/>
+<link rel='stylesheet' href='css/common.8228c60804c6353c4543cc27c228ea3a.css' ><link/>
+<link rel='stylesheet' href='css/list.09360d2fb7c2670fe538c9e2707d1cab.css' ><link/>
+<script src="angle/js/jquery.js" type="text/javascript"></script>
+<script src="angle/js/bootstrap.js" type="text/javascript"></script>
+<script src="./js/angular.min.js" type="text/javascript"></script>
+<script src="./js/angular-route.min.js" type="text/javascript"></script>
+<script src="./app/js/app.js" type="text/javascript"></script>
+<script src="js/ngDialog.min.js" type="text/javascript"></script>
+<script src="js/slide.js" type="text/javascript"></script>
+<script src="js/layer.js" type="text/javascript"></script>
+<script src="js/menu.js" type="text/javascript"></script>
+<script src="js/touchslide.js" type="text/javascript"></script>
+<script src="angle/js/animo.js" type="text/javascript"></script>
+<script src="angle/js/app.js" type="text/javascript"></script>
+<script src="angle/js/demo-rtl.js" type="text/javascript"></script>
+<script src="angle/js/jquery.easing.js" type="text/javascript"></script>
+<script src="angle/js/jquery.localize.js" type="text/javascript"></script>
+<script src="angle/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="angle/js/jquery.storageapi.js" type="text/javascript"></script>
+<script src="angle/js/modernizr.js" type="text/javascript"></script>
+<script src="angle/js/screenfull.js" type="text/javascript"></script>
+<script src="js/smartCommunity.js" type="text/javascript"></script>
+<script src="js/app.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  $(function(){
+  $("#yanglao").click(function(){
+    layer.tips('暂未开通喔...','#');
+  });
+  $("#gengduo").click(function(){
+    layer.tips('暂未开通喔...','#');
+  });
+});
+</script>
+</head>
+<body ng-app="smartCommunityApp" id="bodyPart">
+<!-- 首页标题栏 -->
+<div class="header_l" ng-controller="titleCtrl">
+	<a href="#homepage"><div class="menu_left"><i class="fa fa-home"></i></div></a>
+	<span class="titlebar_l">晶都国际智慧社区</span>
+	<div class="menu_l" ng-click="menu_click()"><i class="fa fa-plus menu_icon_l"></i></div>
+</div>
+
+<!-- 首页菜单栏 -->
+<div class="menu_list_l" ng-if="menu_b">
+	<ul>	
+		<li><i class="fa fa-user menu_list_icon"></i>个人中心</li>
+		<li><i class="fa fa-comment menu_list_icon"></i>消息中心</li>
+		<li><i class="fa fa-pencil menu_list_icon"></i>我的建议</li>
+		<li><i class="fa fa-square menu_list_icon"></i>版本更新</li>
+		<li style="border-bottom:none;"><i class="fa fa-power-off menu_list_icon"></i>退出登录</li>
+	</ul>
+</div>
+
+	 <div ng-view></div>
+	 
+<!-- 首页页尾栏 -->
+<div class="w tool clearfix" style="margin:5px 0px 0px 0px; width:100%;position:fixed;bottom:0px;">
+   <a href="http://m.daliad.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=23">常见问题</a>
+   <a href="http://m.daliad.com/map">版权所有</a>
+   <a href="http://m.daliad.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=24">联系我们</a>
+</div>
+</body>
+</html>

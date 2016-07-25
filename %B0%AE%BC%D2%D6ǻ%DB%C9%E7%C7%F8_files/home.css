@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+
+html{background-color:#fff;}
+body{width:100%;position: relative;}/* .propertyStyle */
+  	
+/* 广告图片区 */
+.bannerImgStyle{float:left;width:100%;position:relative;}
+.bannerImgStyle img{float:left;width:100%;}
+.bannerImgStyle span{
+	background-color:#000;
+	-moz-opacity: 0.3; /* FF 3.5以下 */  
+    opacity: 0.3; /* FF 3.5及以上 */  
+    filter: alpha(opacity=30); /* IE6及以上 */
+    height:35px;width:100%;position:absolute;bottom:0;left:0;
+}
+.bannerImgStyle label{height:35px;line-height:35px;width:100%;color:#eee;position:absolute;bottom:0;left:0;text-indent:5px;font-size:12px;}
+
+/* 主体内容区 */
+.cDivStyle {width:100%;min-height:300px;background-color:#fff;padding-top:4px;padding-bottom:20px;}
+.cDivStyle ul{float:left;width:96%;text-align:center;padding:0 2%;}
+.cDivStyle ul li{float:left;width:33%;padding-top:10px;}
+.cDivStyle ul a img{width:70px;border-radius:14px;}
+.cDivStyle ul a span{float:left;width:100%;height:22px;line-height:22px;color:#393939;}
+
+/* 2015.4.21弹出层内容样式 */
+.popUpStyle {
+  position: fixed;left: 0;bottom:0;z-index:4;
+  width:84%;margin:0 4% 20px;padding:4%;
+  background-color: rgba(00, 00, 00, 0.2);opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.popUpStyle.is-visible {
+  opacity: 1;visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+.popUpStyle ul{background-color:#fff;display:none;padding-bottom:26px;}
+.popUpStyle ul li{float:left;width:33%;}
+.popUpStyle ul a img{}
+.popUpStyle .popUpCloseStyle {float:left;height:40px;font-size:18px;line-height:40px;cursor:pointer;border-bottom:1px solid #eee;background-color:#fff; padding-right: 4%;text-align: right;width: 96%;}
+
+
+/*============================== 首页广告图片轮播样式 ====================================*/
+#slides {display: none;position:relative;}
+#slides .slidesjs-navigation {margin-top:3px;}
+#slides .slidesjs-previous {margin-right: 5px;float: left;}
+#slides .slidesjs-next {margin-right: 5px;float: left;}
+.slidesjs-pagination {position:absolute;right:10px;bottom:6px;z-index:10;list-style: none;}
+.slidesjs-pagination li {float: left;margin: 0 1px;}
+.slidesjs-pagination li a {
+  display: block;
+  width: 10px;
+  height: 0;
+  padding-top: 10px;
+  background-image: url("/wifi1/image/mobilePage_img/pagination.png");
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {background-position: 0 -15px}
+.slidesjs-pagination li a:hover {background-position: 0 -30px}
+#slides a:link
+ , #slides a:visited {color: #333}
+#slides a:hover
+ , #slides a:active {color: #9e2020;}
+.navbar {overflow: hidden;}
+
+
+/* 首页动态公告区 */
+.noticeStyle{float:left;margin:2px 2%;width:96%;}
+.noticeStyle img{float:left;margin-right:5px;width:48px;}
+.noticeStyle span{float:left;height:24px;line-height:24px;font-size:15px;}
+.noticeStyle a{float:left;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .news{width:auto;height:22px;line-height:22px;position:relative;overflow:hidden;}
+  .news .list{width:96%;position:absolute;top:0;left:0;overflow:hidden;}
+  .news .list li{float:left;width:100%;}

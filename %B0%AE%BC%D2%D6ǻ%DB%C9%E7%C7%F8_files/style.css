@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/*==================================== 首页 ====================================*/
+.indexWrap{margin-top: 2px;}
+  /* 轮播样式区 */
+.LB_slider{background-color: #fff;}
+.LB_slider img{float:left;width:100%;}
+  /* 链接的图文样式 */
+.linkStyle{float: left;width: 100%;background-color: #fff;}
+.linkStyle a{color: #7C7b7b;}
+  /* 一行两个的图文样式 */
+.linkTwo{padding:3% 0;border-top: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;}
+.linkTwo div{float:left;width: 49%;height: 56px;overflow: hidden;}
+.linkTwo div:first-child{border-right: 1px solid #f1f1f1;}
+.linkTwo div a{text-align: right;display: block;width: 140px;margin: auto;height: 56px;line-height: 56px;font-size: 1.4em;}
+.linkTwo div a img{float: left;width:50px;margin-top:4px;}
+  /* 图文标题样式 */
+.indexWrap h4{float:left;width:92%;padding:0 4%;font-size: 16px;color: #7C7b7b;height: 34px;line-height: 34px;}
+  /* 一行四个的图文样式 */
+.linkFour{}
+.linkFour li{float:left;width:100%;padding:10px 0;overflow: hidden;border-bottom:1px solid #f1f1f1;}
+.linkFour li:last-child{border:0;} 
+.linkFour li a{float:left;width:24.6%;min-width: 79px;max-width: 179px;text-align: center;overflow: hidden;border-right:1px solid #f1f1f1;}
+.linkFour li a img{display: block;width:32px;margin:4px auto 8px;}
+.linkFour_li a:last-child{border:0;}
+  /* 一行四个的图文样式--添加滑动效果 */
+.linkFour_touch{}
+.linkFour_touch .slides{float:left;width:100%;padding:10px 0;overflow: hidden;}
+.linkFour_touch div{float:left;width:100%;height:70px;border-bottom:1px solid #f1f1f1;overflow: hidden;}
+.linkFour_touch div:last-child{border:0;} 
+.linkFour_touch div a{float:left;width:24%;height: 70px;min-width: 79px;max-width: 179px;text-align: center;overflow: hidden;border-right:1px solid #f1f1f1;}
+.linkFour_touch div a img{display: block;width:32px;margin:4px auto 8px;}
+.linkFour_touch div a:last-child{border:0;}
+			
+/*==================================== 公告列表 ====================================*/
+.proImg{float: left;width: 100%;min-width: 320px;padding-bottom: 4px;}
+  /* 公告列表 样式区 */
+.noticeWrap{margin-top: 0;}
+.noticeWrap .list{float:left;width:100%;background-color: #fff;padding-bottom: 4px;}
+.noticeWrap .list a{float:left;width:91%;padding:12px 5% 12px 4%;height: 70px;border-bottom: 1px solid#E2E2E2;background:url("../../image/nextImg_002.png") 98% center no-repeat;}
+.noticeWrap .list a span{height: 44px;line-height: 22px;font-size: 16px;display: block;color: #636262;margin-bottom: 4px;overflow: hidden;}
+.noticeWrap .list a time{display: block;color: #b9b8b8;}
+
+/*==================================== 商户优惠 ====================================*/
+.preferentialWrap{margin-top: 0;}
+  /* 商户优惠 样式区  */
+.linkIcon_four{float: left;width: 99.4%;background-color: #fff;padding-left: 0.6%;margin-bottom: 6px;}
+.linkIcon_four li{float: left;width:100%;}
+.linkIcon_four li a{float: left;width: 24.7%;text-align: center;color: #7b7c7c;font-size: 12px;padding:12px 0; border-right: 1px solid #E2E2E2;border-bottom: 1px solid #E2E2E2;}
+.linkIcon_four li a img{display: block;margin:4px auto 8px;width:32px;}
+
+/*==================================== 个人中心  ====================================*/
+.personalC_Wrap{margin-top: 0;}
+  /* 用户头像和名称 */
+.userName{float: left;width: 92%;padding:0 4%; background-color: #fff;color:#7C7b7b;font-size: 18px;margin-bottom: 6px;}
+.userName .headImg{float:left;width:52px;height:52px;margin:8px 10px 8px 0; border:1px solid #ccc;border-radius: 28px;}
+ .userName .headDiv{float:left;height:52px;margin:12px 10px 0 0;}
+ 
+  /* 图文列表样式公共区 */
+.link_li{float: left;width:100%;background-color: #fff;margin-bottom: 8px;}
+.link_li li{float: left;width: 92%;padding:0 4%;border-top: 1px solid #f1f1f1;color: #7C7B7B;}
+.link_li li:first-child{border: 0;}
+.link_li li a{color: #7C7B7B;font-size: 15px;}
+.link_li li img{float:left;width:28px;}
+  /* 一行两列的图文链接区 */
+.couponLink{}
+.couponLink li{height: 60px;line-height: 60px;}
+.couponLink li a{float: left;width:49.5%;border-right: 1px solid #f1f1f1;}
+.couponLink li a:last-child{border:0;}
+.couponLink li a:last-child img{padding-left: 10%;}
+.couponLink li img{margin:16px 10px 16px 0;}
+.couponLink .balance{border:0;}
+.couponLink .balanceInfo label{float:right;color: red;font-size: 16px;font-weight: bold;margin-left: 6px;}
+.couponLink .balanceOperate{height: 30px;}
+.couponLink .balanceOperate input{color: #fff;width:80px;height: 28px;margin:-6px 0 10px 4%;border-radius: 6px;text-align: center;background-color: yellowgreen;}
+  /* 一行一列的图文链接区 */
+.linkPage{}
+.linkPage li{height: 40px;line-height: 40px;}
+.linkPage li a{float: left;width: 100%;}
+.linkPage li img{margin:6px 10px 6px 0;}
+
+/*==================================== 物业管理信息  ====================================*/
+.proManageWrap{margin-top: 0;}
+  /* 物管信息 */
+.proManageWrap .list{float:left;width:100%;margin-top:4px;background-color: #fff;padding-bottom: 4px;}
+.proManageWrap .list a{float:left;width:92%;padding:12px 4% 8px;height: 70px;border-bottom: 1px solid#E2E2E2;}
+.proManageWrap .list a span{height: 22px;line-height: 22px;font-size: 18px;display: block;color: #636262;margin-bottom: 6px;overflow: hidden;}
+.proManageWrap .list a time
+  ,.proManageWrap .list a address{display: block;color: #b9b8b8;font-size: 13px;}
+
+/*==================================== 随手拍  ====================================*/
+.proManageWrap{margin-top: 0;}
+/* 随手拍样式区 */
+.proManageWrap .cont{float:left;width:92%;padding:4px 4%;margin-top:4px;background-color: #fff;}
+.proManageWrap .cont span{float:left;width: 100%;color: #7c7b7b;height: 20px;line-height: 20px;padding:10px 0 6px;overflow: hidden;}
+.proManageWrap .cont span label{color: red;margin-right: 2px;line-height: 22px;vertical-align: sub;}
+.proManageWrap .cont .addTitle{height: 28px;line-height: 30px;}
+.proManageWrap .cont .addTitle label{vertical-align: middle;}
+.proManageWrap .cont .addTitle img{float:left;width:30px;margin-right: 8px;}
+.proManageWrap .cont .addTitle a{color: #003BB3;text-decoration: underline;}
+.proManageWrap .cont .textDiv{float:left;width: 95%;height: 22px;line-height: 22px;padding:6px 2%; border-radius: 6px;border:1px solid #E2E2E2;color: #7C7B7B;}
+.proManageWrap .cont .sqCont{min-height: 22px;height:auto;word-wrap:break-word;}
+.proManageWrap .cont .addPhone{height: auto;min-height: 40px;background:url("../../image/addImg_002.png") center center no-repeat;}
+.proManageWrap .cont .addPhone a{float: left;width:33%;text-align: center;}
+.proManageWrap .cont .addPhone img{width:88%;max-width:190px;min-width: 84px;border:1px solid #ccc;}
+
+.addBtnStyle{width:92% !important;margin:20px 4% !important;overflow: hidden;}

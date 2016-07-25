@@ -1,0 +1,29 @@
+/*
+  Design by yiuchak 6379166@qq.com
+*/
+@charset "utf-8";
+
+@media screen and (min-width:321px) and (max-width:480px){
+	.focus{
+	   width:346px;
+	   height:160px;
+	}
+}
+@media screen and (min-width:361px) and (max-width:375px){
+	.focus{
+	   width:360px;
+	   height:160px;
+	}
+	.focus .bd li img{
+		height:160px !important;
+	}
+}
+@media screen and (min-width:376px) and (max-width:414px){
+	.focus{
+	   width:397px;
+	   height:180px;
+	}
+	.focus .bd li img{
+	   height:180px !important;
+	}
+}

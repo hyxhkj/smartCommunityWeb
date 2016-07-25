@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bootstrap</title>
+   <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div>
+	<h3>buffered ngRepeat with auto-slide(pause on hover) and builtin indicators </h3>
+	<div class="carousel-demo">
+		<div class="text-left">index: </div>
+		<input style="" ng-model="caro.carouselIndex2" class="form-control input-sm wd-sm mb ng-untouched ng-valid ng-dirty" type="number">
+		<ul rn-carousel="" rn-carousel-index="caro.carouselIndex2" rn-carousel-auto-slide="" rn-carousel-pause-on-hover="" rn-carousel-buffered="" class="list-unstyled carousel2 ng-scope"><!-- ngRepeat: slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id -->
+			<li style="display: inline-block; transform: translate3d(-300%, 0px, 0px);" class="ng-scope id-6" ng-repeat="slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id" ng-class="'id-' + slide.id"><div style="background-image: url(&quot;http://lorempixel.com/1200/500/sports/6&quot;);" ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage ng-binding"># 6</div></li><!-- end ngRepeat: slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id -->
+			<li style="display: inline-block; transform: translate3d(-200%, 0px, 0px);" class="ng-scope id-7" ng-repeat="slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id" ng-class="'id-' + slide.id"><div style="background-image: url(&quot;http://lorempixel.com/1200/500/sports/7&quot;);" ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage ng-binding"># 7</div></li><!-- end ngRepeat: slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id -->
+			<li style="display: inline-block; transform: translate3d(-100%, 0px, 0px);" class="ng-scope id-8" ng-repeat="slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id" ng-class="'id-' + slide.id"><div style="background-image: url(&quot;http://lorempixel.com/1200/500/sports/8&quot;);" ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage ng-binding"># 8</div></li><!-- end ngRepeat: slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id -->
+			<li style="display: inline-block; transform: translate3d(0%, 0px, 0px);" class="ng-scope id-9" ng-repeat="slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id" ng-class="'id-' + slide.id"><div style="background-image: url(&quot;http://lorempixel.com/1200/500/sports/9&quot;);" ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage ng-binding"># 9</div></li><!-- end ngRepeat: slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id -->
+			<li style="display: inline-block; transform: translate3d(100%, 0px, 0px);" class="ng-scope id-10" ng-repeat="slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id" ng-class="'id-' + slide.id"><div style="background-image: url(&quot;http://lorempixel.com/1200/500/sports/0&quot;);" ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage ng-binding"># 10</div></li><!-- end ngRepeat: slide in caro.slides2|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id -->
+		</ul><!-- ngIf: caro.slides2.length > 1 -->
+		<div class="ng-scope ng-isolate-scope" rn-carousel-indicators="" ng-if="caro.slides2.length > 1" slides="caro.slides2" rn-carousel-index="caro.carouselIndex2">
+			<div class="rn-carousel-indicator">
+				<!-- ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope active" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+				<span style="" class="ng-scope" ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)">¡ñ</span><!-- end ngRepeat: slide in slides -->
+			</div>
+		</div><!-- end ngIf: caro.slides2.length > 1 -->
+	</div>
+</div>
+
+</body>
+</html>
