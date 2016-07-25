@@ -61,7 +61,7 @@ smartCommunityApp.controller('dialogController', function($scope, ngDialog){
 });
 
 smartCommunityApp.controller('titleCtrl', function($scope, $rootScope){
-	$rootScope.menu_b = false;	
+//	$rootScope.menu_b = false;	
 	
 	$scope.menu_click = function(){
 		$rootScope.menu_b = !$rootScope.menu_b;
@@ -93,6 +93,19 @@ smartCommunityApp.controller('problemsCtrl', function($scope, $http){
 	}
 });
 
+smartCommunityApp.controller('aroundCtrl', function($scope, $http){
+	
+	var high = window.screen.height;
+	$(".around").height(high-40);
+	$(".around").css("overflow", "scroll");
+
+	$http.get("/smartCommunity/v1/communitySurrounding.smart").success(function(data, status){
+		$scope.business_list = data.businessBeans;
+		$scope.shop_list = data.shopBeans;
+	});
+
+});
+
 smartCommunityApp.controller('forumCtrl', function($scope){
 	
 	var high = window.screen.height;
@@ -118,9 +131,3 @@ smartCommunityApp.controller('lifeCtrl', function($scope){
 	$(".life").css("overflow", "scroll");
 });
 
-smartCommunityApp.controller('aroundCtrl', function($scope){
-	
-	var high = window.screen.height;
-	$(".around").height(high-40);
-	$(".around").css("overflow", "scroll");
-});

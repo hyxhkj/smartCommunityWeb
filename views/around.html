@@ -1,28 +1,13 @@
-<div class="newpage around" style="margin-top:48px;" ngcontroller="aroundCtrl">
+<div class="newpage around" style="margin-top:48px;" >
 
 
-<article>
+<article ng-controller="aroundCtrl">
 <section id="j-filter-sort">
 
 <section class="filter-sort">
 <ul class="filter-sort-head auto-hide" data-role="filter-sort-head" mon="element_type=filter">
-
-<li class="head-tab tab4" data-type="category" mon="area=catg">医院</li>
-<li class="head-tab tab4" data-type="area" mon="area=district">银行ATM</li>
-<li class="head-tab tab4" data-type="order" mon="area=order">快递代收</li>
-<li class="head-tab tab4" data-type="filter" mon="area=filter">超市商场</li>
-<li class="head-tab tab4" data-type="order" mon="area=order">快递代收</li>
-<li class="head-tab tab4" data-type="filter" mon="area=filter">超市商场</li>
-
+<li class="head-tab tab4" data-type="category" mon="area=catg" ng-click="noapply()" ng-repeat="business in business_list">{{business.businessDescription}}</li>
 </ul>
-<div class="filter-sort-body" data-role="filter-sort-body" mon="element_type=filter" style="display:none;">
-
-<section class="body-part category-part" data-type="category" mon="area=catg"></section>
-<section class="body-part area-part" data-type="area" data-active-type="area" mon="area=district"></section>
-<section class="body-part order-part" data-type="order" mon="area=order"></section>
-<section class="body-part filter-part" data-type="filter" mon="area=filter"></section>
-
-</div>
 </section>
 </section>
 <section id="j-list-top-poster"></section>
@@ -36,21 +21,20 @@ F.context('mall', null);
 <div class="list-poi-goods">
 </div>
 </div>
-<section id="j-good-container">
 
-
+<section id="j-good-container" style="margin-bottom: 0px;" ng-repeat="shop in shop_list">
 <div class="list-poi-goods">
-<section class="poi" data-type="charge-poi" data-poi-id="109001" data-poi-name="北京大学人民医院" data-chargeurl="" data-timestamp="" data-source="0" data-cid="" data-channel-content="">
+<section class="poi" data-type="charge-poi" data-poi-id="109001" data-poi-name={{shop.shopName}} data-chargeurl="" data-timestamp="" data-source="0" data-cid="" data-channel-content="">
 <div class="poi-header" data-url="" data-role="poi-header" data-mon="element=109001&amp;area=poiheader" style="background-position: top;">
 <div style="width:70%;float:left">
 <div class="title-line ">
 <div class="title">
-<h4 class="item-name">北京大学人民医院</h4>
+<h4 class="item-name">{{shop.shopName}}</h4>
 </div>
 </div>
 <p class="sub-title">
 <span class="distance"></span>
-<span class="store"><i class="fa fa- fa-map-marker" style="margin-right:3px;"></i>西城区西直门南300米</span>
+<span class="store"><i class="fa fa- fa-map-marker" style="margin-right:3px;"></i>{{shop.shopAddress}}</span>
 </p>
 </div>
 <div class="contact_right"><i class="fa fa-phone-square"></i><i class="fa fa-envelope-o" style="margin-left:10px;"></i><i class="fa fa-internet-explorer" style="margin-left:10px;"></i></div>
@@ -64,189 +48,16 @@ F.context('mall', null);
 </div>
 <div class="info-wrapper">
 <p class="desc" style="margin-bottom:0px;">
-门诊部：周一至周六  8:00~18:00</p>
+{{shop.shopSales}}</p>
 <p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-当日挂号，挂完为止
-</p>
-</div>
-</div>
-<div class="good-content" data-role="good-content" data-tiny-url="zgnzlzeb" data-full-url="" data-deal-id="4841912" data-deal-type="1" data-is-card="0" data-s="abd1ea32217e9c4d41e95e5dad9539af" data-rid="49f16df28441541ea36f22a204239c89" data-cuid="" href="//m.nuomi.com/bj/deal/zgnzlzeb?s=abd1ea32217e9c4d41e95e5dad9539af&amp;rid=49f16df28441541ea36f22a204239c89" data-mon="element=4841912&amp;area=poi_list" style="clear: both;">
-<div class="img-wrapper">
-<div class="img-placeholder">
-<img src="views/images/hospital/hos1.gif" data-role="deal-img" data-src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D230%3Bq%3D80/sign=1e58493e9c504fc2b610ea45d8edcb21/63d9f2d3572c11df989a7a15642762d0f703c2b9.jpg" width="108" height="64" style="visibility: visible; height: 100%;">
-</div>
-</div>
-<div class="info-wrapper">
-<p class="desc" style="margin-bottom:0px;">
-门诊部：周一至周六  8:00~18:00</p>
-<p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-当日挂号，挂完为止
+{{shop.remark}}
 </p>
 </div>
 </div>
 
-</div>
-<div class="poi-footer" data-role="poi-footer">
-<span class="view">更过详细信息</span>
-<span class="put">收起</span>
 </div>
 </section>
 
-<section class="poi" data-type="charge-poi" data-poi-id="109001" data-poi-name="北京大学人民医院" data-chargeurl="" data-timestamp="" data-source="0" data-cid="" data-channel-content="">
-<div class="poi-header" data-url="" data-role="poi-header" data-mon="element=109001&amp;area=poiheader" style="background-position: top;">
-<div style="width:70%;float:left">
-<div class="title-line ">
-<div class="title">
-<h4 class="item-name">北京儿童医院</h4>
-</div>
-</div>
-<p class="sub-title">
-<span class="distance"></span>
-<span class="store"><i class="fa fa- fa-map-marker" style="margin-right:3px;"></i>西城区复兴门地铁站西北200米</span>
-</p>
-</div>
-<div class="contact_right"><i class="fa fa-phone-square"></i><i class="fa fa-envelope-o" style="margin-left:10px;"></i><i class="fa fa-internet-explorer" style="margin-left:10px;"></i></div>
-</div>
-<div class="good" style="clear: both;">
-<div class="good-content" data-role="good-content" data-tiny-url="zgnzlzeb" data-full-url="" data-deal-id="4841912" data-deal-type="1" data-is-card="0" data-s="abd1ea32217e9c4d41e95e5dad9539af" data-rid="49f16df28441541ea36f22a204239c89" data-cuid="" href="//m.nuomi.com/bj/deal/zgnzlzeb?s=abd1ea32217e9c4d41e95e5dad9539af&amp;rid=49f16df28441541ea36f22a204239c89" data-mon="element=4841912&amp;area=poi_list">
-<div class="img-wrapper">
-<div class="img-placeholder">
-<img src="views/images/hospital/hos3.jpg" data-role="deal-img" data-src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D230%3Bq%3D80/sign=1e58493e9c504fc2b610ea45d8edcb21/63d9f2d3572c11df989a7a15642762d0f703c2b9.jpg" width="108" height="64" style="visibility: visible;">
-</div>
-</div>
-<div class="info-wrapper">
-<p class="desc" style="margin-bottom:0px;">
-门诊部：周一至周六  8:00~18:00</p>
-<p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-当日挂号，挂完为止
-</p>
-</div>
-</div>
-<div class="good-content" data-role="good-content" data-tiny-url="znmtn1vb" data-full-url="" data-deal-id="8043072" data-deal-type="1" data-is-card="0" data-s="abd1ea32217e9c4d41e95e5dad9539af" data-rid="49f16df28441541ea36f22a204239c89" data-cuid="" href="//m.nuomi.com/bj/deal/znmtn1vb?s=abd1ea32217e9c4d41e95e5dad9539af&amp;rid=49f16df28441541ea36f22a204239c89" data-mon="element=8043072&amp;area=poi_list">
-<div class="img-wrapper">
-<div class="img-placeholder">
-<img src="views/images/hospital/hos4.jpg" data-role="deal-img" data-src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C470%2C285%3Bw%3D230%3Bq%3D80/sign=ec3e7dd79e22720e6f81b8ba46fb2676/1ad5ad6eddc451da6402d45eb0fd5266d116328b.jpg" width="108" height="64" style="visibility: visible;">
-</div>
-</div>
-<div class="info-wrapper">
-<p class="desc">
-急诊：周一至周日 全天24小时工作制</p>
-<p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-请您合理安排您的时间，祝您身心健康
-</p>
-</div>
-</div>
-
-</div>
-<div class="poi-footer" data-role="poi-footer">
-<span class="view">更过详细信息</span>
-<span class="put">收起</span>
-</div>
-</section>
-
-<section class="poi" data-type="charge-poi" data-poi-id="109001" data-poi-name="北京大学人民医院" data-chargeurl="" data-timestamp="" data-source="0" data-cid="" data-channel-content="">
-<div class="poi-header" data-url="" data-role="poi-header" data-mon="element=109001&amp;area=poiheader">
-<div style="width:70%;float:left">
-<div class="title-line ">
-<div class="title">
-<h4 class="item-name">北京北医三院</h4>
-</div>
-</div>
-<p class="sub-title">
-<span class="distance"></span>
-<span class="store"><i class="fa fa- fa-map-marker" style="margin-right:3px;"></i>海淀区学知桥北300米</span>
-</p>
-</div>
-<div class="contact_right"><i class="fa fa-phone-square"></i><i class="fa fa-envelope-o" style="margin-left:10px;"></i><i class="fa fa-internet-explorer" style="margin-left:10px;"></i></div>
-</div>
-<div class="good" style="margin-top:25px;">
-<div class="good-content" data-role="good-content" data-tiny-url="zgnzlzeb" data-full-url="" data-deal-id="4841912" data-deal-type="1" data-is-card="0" data-s="abd1ea32217e9c4d41e95e5dad9539af" data-rid="49f16df28441541ea36f22a204239c89" data-cuid="" href="//m.nuomi.com/bj/deal/zgnzlzeb?s=abd1ea32217e9c4d41e95e5dad9539af&amp;rid=49f16df28441541ea36f22a204239c89" data-mon="element=4841912&amp;area=poi_list">
-<div class="img-wrapper">
-<div class="img-placeholder">
-<img src="views/images/hospital/hos5.jpg" data-role="deal-img" data-src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D230%3Bq%3D80/sign=1e58493e9c504fc2b610ea45d8edcb21/63d9f2d3572c11df989a7a15642762d0f703c2b9.jpg" width="108" height="64" style="visibility: visible;">
-</div>
-</div>
-<div class="info-wrapper">
-<p class="desc" style="margin-bottom:0px;">
-门诊部：周一至周六  8:00~18:00</p>
-<p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-当日挂号，挂完为止
-</p>
-</div>
-</div>
-<div class="good-content" data-role="good-content" data-tiny-url="znmtn1vb" data-full-url="" data-deal-id="8043072" data-deal-type="1" data-is-card="0" data-s="abd1ea32217e9c4d41e95e5dad9539af" data-rid="49f16df28441541ea36f22a204239c89" data-cuid="" href="//m.nuomi.com/bj/deal/znmtn1vb?s=abd1ea32217e9c4d41e95e5dad9539af&amp;rid=49f16df28441541ea36f22a204239c89" data-mon="element=8043072&amp;area=poi_list">
-<div class="img-wrapper">
-<div class="img-placeholder">
-<img src="views/images/hospital/hos6.jpg" data-role="deal-img" data-src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C470%2C285%3Bw%3D230%3Bq%3D80/sign=ec3e7dd79e22720e6f81b8ba46fb2676/1ad5ad6eddc451da6402d45eb0fd5266d116328b.jpg" width="108" height="64" style="visibility: visible;">
-</div>
-</div>
-<div class="info-wrapper">
-<p class="desc">
-急诊：周一至周日 全天24小时工作制</p>
-<p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-请您合理安排您的时间，祝您身心健康
-</p>
-</div>
-</div>
-
-</div>
-<div class="poi-footer" data-role="poi-footer">
-<span class="view">更过详细信息</span>
-<span class="put">收起</span>
-</div>
-</section>
-
-<section class="poi" data-type="charge-poi" data-poi-id="109001" data-poi-name="北京大学人民医院" data-chargeurl="" data-timestamp="" data-source="0" data-cid="" data-channel-content="">
-<div class="poi-header" data-url="" data-role="poi-header" data-mon="element=109001&amp;area=poiheader">
-<div style="width:70%;float:left">
-<div class="title-line ">
-<div class="title">
-<h4 class="item-name">解放军火箭军总医院</h4>
-</div>
-</div>
-<p class="sub-title">
-<span class="distance"></span>
-<span class="store"><i class="fa fa- fa-map-marker" style="margin-right:3px;"></i>海淀区杏坛路南</span>
-</p>
-</div>
-<div class="contact_right"><i class="fa fa-phone-square"></i><i class="fa fa-envelope-o" style="margin-left:10px;"></i><i class="fa fa-internet-explorer" style="margin-left:10px;"></i></div>
-</div>
-<div class="good" style="margin-top:25px;">
-<div class="good-content" data-role="good-content" data-tiny-url="zgnzlzeb" data-full-url="" data-deal-id="4841912" data-deal-type="1" data-is-card="0" data-s="abd1ea32217e9c4d41e95e5dad9539af" data-rid="49f16df28441541ea36f22a204239c89" data-cuid="" href="//m.nuomi.com/bj/deal/zgnzlzeb?s=abd1ea32217e9c4d41e95e5dad9539af&amp;rid=49f16df28441541ea36f22a204239c89" data-mon="element=4841912&amp;area=poi_list">
-<div class="img-wrapper">
-<div class="img-placeholder">
-<img src="views/images/hospital/hos7.jpg" data-role="deal-img" data-src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D230%3Bq%3D80/sign=1e58493e9c504fc2b610ea45d8edcb21/63d9f2d3572c11df989a7a15642762d0f703c2b9.jpg" width="108" height="64" style="visibility: visible;">
-</div>
-</div>
-<div class="info-wrapper">
-<p class="desc" style="margin-bottom:0px;">
-门诊部：周一至周六  8:00~18:00</p>
-<p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-当日挂号，挂完为止
-</p>
-</div>
-</div>
-<div class="good-content" data-role="good-content" data-tiny-url="znmtn1vb" data-full-url="" data-deal-id="8043072" data-deal-type="1" data-is-card="0" data-s="abd1ea32217e9c4d41e95e5dad9539af" data-rid="49f16df28441541ea36f22a204239c89" data-cuid="" href="//m.nuomi.com/bj/deal/znmtn1vb?s=abd1ea32217e9c4d41e95e5dad9539af&amp;rid=49f16df28441541ea36f22a204239c89" data-mon="element=8043072&amp;area=poi_list">
-<div class="img-wrapper">
-<div class="img-placeholder">
-<img src="views/images/hospital/hos8.jpg" data-role="deal-img" data-src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C470%2C285%3Bw%3D230%3Bq%3D80/sign=ec3e7dd79e22720e6f81b8ba46fb2676/1ad5ad6eddc451da6402d45eb0fd5266d116328b.jpg" width="108" height="64" style="visibility: visible;">
-</div>
-</div>
-<div class="info-wrapper">
-<p class="desc">
-急诊：周一至周日 全天24小时工作制</p>
-<p class="price-line" style="font-size:5px;color:black;overflow:visible;">
-请您合理安排您的时间，祝您身心健康
-</p>
-</div>
-</div>
-
-</div>
-<div class="poi-footer" data-role="poi-footer">
-<span class="view">更过详细信息</span>
-<span class="put">收起</span>
-</div>
-</section>
 
 
 </article>
