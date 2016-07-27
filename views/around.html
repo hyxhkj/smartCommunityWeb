@@ -5,7 +5,7 @@
 <section id="j-filter-sort">
 
 <section class="filter-sort">
-<ul class="filter-sort-head auto-hide" data-role="filter-sort-head" mon="element_type=filter">
+<ul class="filter-sort-head auto-hide business_ul" data-role="filter-sort-head" mon="element_type=filter">
 <li class="head-tab tab4" data-type="category" mon="area=catg" ng-click="noapply()" ng-repeat="business in business_list">{{business.businessDescription}}</li>
 </ul>
 </section>
@@ -22,7 +22,7 @@ F.context('mall', null);
 </div>
 </div>
 
-<section id="j-good-container" style="margin-bottom: 0px;" ng-repeat="shop in shop_list">
+<section id="j-good-container" ng-repeat="shop in shop_list">
 <div class="list-poi-goods">
 <section class="poi" data-type="charge-poi" data-poi-id="109001" data-poi-name={{shop.shopName}} data-chargeurl="" data-timestamp="" data-source="0" data-cid="" data-channel-content="">
 <div class="poi-header" data-url="" data-role="poi-header" data-mon="element=109001&amp;area=poiheader" style="background-position: top;">

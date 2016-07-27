@@ -55,20 +55,20 @@
 </head>
 <body ng-app="smartCommunityApp" id="bodyPart">
 <!-- 首页标题栏 -->
-<div class="header_l" ng-controller="titleCtrl">
+<div class="header_l" ng-controller="titleCtrl" ng-init="menu_b = false">
 	<a href="#homepage"><div class="menu_left"><i class="fa fa-home"></i></div></a>
 	<span class="titlebar_l">晶都国际智慧社区</span>
 	<div class="menu_l" ng-click="menu_click()"><i class="fa fa-plus menu_icon_l"></i></div>
 </div>
 
 <!-- 首页菜单栏 -->
-<div class="menu_list_l" ng-if="menu_b">
+<div class="menu_list_l" ng-if="menu_b" ng-controller="menuCtrl">
 	<ul>	
 		<li><i class="fa fa-user menu_list_icon"></i>个人中心</li>
 		<li><i class="fa fa-comment menu_list_icon"></i>消息中心</li>
 		<li><i class="fa fa-pencil menu_list_icon"></i>我的建议</li>
 		<li><i class="fa fa-square menu_list_icon"></i>版本更新</li>
-		<li style="border-bottom:none;"><i class="fa fa-power-off menu_list_icon"></i>退出登录</li>
+		<li style="border-bottom:none;" ng-click="user_login()"><i class="fa fa-power-off menu_list_icon"></i>退出登录</li>
 	</ul>
 </div>
 

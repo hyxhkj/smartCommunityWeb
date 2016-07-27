@@ -106,11 +106,15 @@ smartCommunityApp.controller('aroundCtrl', function($scope, $http){
 
 });
 
-smartCommunityApp.controller('forumCtrl', function($scope){
+smartCommunityApp.controller('forumCtrl', function($scope, $http){
 	
 	var high = window.screen.height;
 	$(".forum").height(high-40);
 	$(".forum").css("overflow", "scroll");
+
+	$http.get("/smartCommunity/v1/getArticles.smart").success(function(data, status){
+		$scope.article_list = data.articleBeans;
+	});
 });
 
 smartCommunityApp.controller('homeCtrl', function($scope){
@@ -131,3 +135,10 @@ smartCommunityApp.controller('lifeCtrl', function($scope){
 	$(".life").css("overflow", "scroll");
 });
 
+smartCommunityApp.controller('menuCtrl', function($scope, ngDialog){
+	$scope.user_login = function(){
+		ngDialog.open({
+			template:'views/user_login.html'
+		})
+	}
+});
