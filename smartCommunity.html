@@ -62,14 +62,16 @@
 </div>
 
 <!-- 首页菜单栏 -->
-<div class="menu_list_l" ng-if="menu_b" ng-controller="menuCtrl">
+<div style="width:100%;height:100%;opacity:0;" ng-if="menu_b" ng-controller="menuCtrl">
+<div class="menu_list_l">
 	<ul>	
 		<li><i class="fa fa-user menu_list_icon"></i>个人中心</li>
 		<li><i class="fa fa-comment menu_list_icon"></i>消息中心</li>
 		<li><i class="fa fa-pencil menu_list_icon"></i>我的建议</li>
 		<li><i class="fa fa-square menu_list_icon"></i>版本更新</li>
-		<li style="border-bottom:none;" ng-click="user_login()"><i class="fa fa-power-off menu_list_icon"></i>退出登录</li>
+		<li style="border-bottom:none;"><a href="#user_login"><i class="fa fa-power-off menu_list_icon"></i>退出登录</a></li>
 	</ul>
+</div>
 </div>
 
 	 <div ng-view></div>

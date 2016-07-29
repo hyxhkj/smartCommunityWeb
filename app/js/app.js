@@ -16,6 +16,12 @@ smartCommunityApp.config(['$routeProvider',function ($routeProvider) {
 	  .when('/around', {
           templateUrl: 'views/around.html',
       })
+	  .when('/user_login', {
+          templateUrl: 'views/user_login.html',
+      })
+	  .when('/user_register', {
+          templateUrl: 'views/user_register.html',
+      })
 	  .when('/list/:id', {
           templateUrl: 'views/route/detail.html',
           controller: 'RouteDetailCtl'
@@ -138,7 +144,20 @@ smartCommunityApp.controller('lifeCtrl', function($scope){
 smartCommunityApp.controller('menuCtrl', function($scope, ngDialog){
 	$scope.user_login = function(){
 		ngDialog.open({
-			template:'views/user_login.html'
+			template:'views/user_login.html',
+			showClose:false,
+			closeByNavigation:true,
+			controller: ['$scope', 'ngDialog', function($scope, ngDialog) {
+				$scope.user_register = function(){
+					ngDialog.open({
+						template:'views/user_register.html',
+						showClose:false,
+						closeByNavigation:true,
+						className: 'ngdialog-theme-plain'
+					})
+				}
+			}],
+			className: 'ngdialog-theme-plain'
 		})
 	}
 });
