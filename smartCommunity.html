@@ -62,7 +62,7 @@
 </div>
 
 <!-- 首页菜单栏 -->
-<div style="width:100%;height:100%;opacity:0;" ng-if="menu_b" ng-controller="menuCtrl">
+<div style="width: 100%; height: 100%; position: fixed; top: 48px; z-index: 99" ng-if="menu_b" ng-controller="menuCtrl" ng-click="fade()">
 <div class="menu_list_l">
 	<ul>	
 		<li><i class="fa fa-user menu_list_icon"></i>个人中心</li>

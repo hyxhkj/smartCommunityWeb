@@ -112,7 +112,7 @@ smartCommunityApp.controller('aroundCtrl', function($scope, $http){
 
 });
 
-smartCommunityApp.controller('forumCtrl', function($scope, $http){
+smartCommunityApp.controller('forumCtrl', function($scope, $http, ngDialog){
 	
 	var high = window.screen.height;
 	$(".forum").height(high-40);
@@ -121,6 +121,25 @@ smartCommunityApp.controller('forumCtrl', function($scope, $http){
 	$http.get("/smartCommunity/v1/getArticles.smart").success(function(data, status){
 		$scope.article_list = data.articleBeans;
 	});
+
+	$scope.sendArticle = function(){
+		ngDialog.open({
+			template:'views/sendArticle.html',
+			showClose:false,
+			closeByNavigation:true,
+			controller: ['$scope', 'ngDialog', function($scope, ngDialog) {
+				$scope.user_register = function(){
+					ngDialog.open({
+						template:'views/user_register.html',
+						showClose:false,
+						closeByNavigation:true,
+						className: 'ngdialog-theme-plain'
+					})
+				}
+			}],
+			className: 'ngdialog-theme-plain'
+		})
+	}
 });
 
 smartCommunityApp.controller('homeCtrl', function($scope){
@@ -132,6 +151,7 @@ smartCommunityApp.controller('homeCtrl', function($scope){
 	$scope.noapply = function(){
 		alert("该功能暂未开通 敬请更新");
 	}
+
 });
 
 smartCommunityApp.controller('lifeCtrl', function($scope){
@@ -141,7 +161,7 @@ smartCommunityApp.controller('lifeCtrl', function($scope){
 	$(".life").css("overflow", "scroll");
 });
 
-smartCommunityApp.controller('menuCtrl', function($scope, ngDialog){
+smartCommunityApp.controller('menuCtrl', function($scope, $rootScope, ngDialog){
 	$scope.user_login = function(){
 		ngDialog.open({
 			template:'views/user_login.html',
@@ -159,5 +179,9 @@ smartCommunityApp.controller('menuCtrl', function($scope, ngDialog){
 			}],
 			className: 'ngdialog-theme-plain'
 		})
+	}
+
+	$scope.fade = function(){
+		$rootScope.menu_b = !$rootScope.menu_b;
 	}
 });
