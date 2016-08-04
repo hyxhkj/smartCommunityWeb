@@ -185,3 +185,17 @@ smartCommunityApp.controller('menuCtrl', function($scope, $rootScope, ngDialog){
 		$rootScope.menu_b = !$rootScope.menu_b;
 	}
 });
+
+smartCommunityApp.controller('loginCtrl', function($scope, $http){
+	
+	function GetQueryString(name)
+	{
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		alert(window.location.search);
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return  unescape(r[2]); return null;
+	}
+	var redirectToUrl = GetQueryString("requestUrl");
+	alert(redirectToUrl);
+	
+});

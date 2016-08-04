@@ -1,23 +1,45 @@
-<div id="thumbnail-fine-uploader"></div>
+<html>
+<head>
+	<link href="../fine-uploader/fine-uploader.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet"> 
+	
+	<script src="../fine-uploader/fine-uploader.min.js"></script>
+    <script src="../fine-uploader/iframe.xss.response.js"></script>
+</head> 
  
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="fine-uploader/fine-uploader.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $('#thumbnail-fine-uploader').fineUploader({
-      request: {
-        endpoint: 'server/success.html'
-      },
-      validation: {
-        allowedExtensions: ['jpeg', 'jpg', 'gif', 'png']
-      },
-      text: {
-        uploadButton: 'Click or Drop'
-      }
-    }).on('complete', function(event, id, fileName, responseJSON) {
-      if (responseJSON.success) {
-        $(this).append('<img src="img/success.jpg" alt="' + fileName + '">');
-      }
-    });
-  });
-</script>
+  
+<body>
+
+	<div id="bootstrapped-fine-uploader"></div>   
+             <script>
+                 function createUploader() {
+                     var uploader = new qq.FineUploader({
+                         element: document.getElementById('bootstrapped-fine-uploader'),
+                         request: {
+                             endpoint: 'server/handlerfunction'
+                         },
+                         text: {
+                            uploadButton: '<i class="icon-upload icon-white"></i> Click me now and upload a product image'
+                        },
+                        template: 
+                            '<div class="qq-uploader span12">' +
+                            '<pre class="qq-upload-drop-area span12"><span>{dragZoneText}</span></pre>' +
+                            '<div class="qq-upload-button btn btn-success" style="width: auto;">{uploadButtonText}</div>' +
+                            '<span class="qq-drop-processing"><span>{dropProcessingText}</span>'+
+                            '<span class="qq-drop-processing-spinner"></span></span>' +
+                            '<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"></ul>' +
+                            '</div>',
+                        classes: {
+                            success: 'alert alert-success',
+                            fail: 'alert alert-error'
+                        },
+                        debug: true
+                    });
+                }
+                
+                window.onload = createUploader;
+            </script>
+
+</body>
+
+</html>
